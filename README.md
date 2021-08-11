@@ -12,6 +12,6 @@ This repo contains my public dotfiles.
 
 - [Shell setup](https://github.com/Allaman/ansible-role-dotfiles)
 - [Package management](https://github.com/Allaman/ansible-role-packages)
-- [Binaries](https://github.com/Allaman/ansible-role-binaries)
-- [dotfiles](https://github.com/Allaman/ansible-role-dotfiles)
+- [Binaries](https://github.com/gleichda/ansible-role-binaries)
+- [dotfiles](https://github.com/gleichda/ansible-role-dotfiles)
 

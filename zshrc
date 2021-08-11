@@ -1,6 +1,9 @@
 # Profiling zsh start
 #zmodload zsh/zprof
-stty -ixon                                                      # disable ctrl-s and ctrl-q
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -45,21 +48,6 @@ setopt complete_aliases                                         # autocompletion
 zstyle ':completion:*' list-colors ''                           # show colors on menu completion
 compinit -d
 colors
-
-## Keybindings section
-bindkey -e # emacs style
-bindkey "^[[3~" delete-char                                  # Delete key
-bindkey '^[[2~' overwrite-mode                               # Insert key
-bindkey  "^[[H"   beginning-of-line                          # Home
-bindkey  "^[[F"   end-of-line                                # End
-bindkey '^P' history-beginning-search-backward               # CTRL+p
-bindkey '^N' history-beginning-search-forward                # CTRL+n
-# Use vim keys to select autocompletion
-_comp_options+=(globdots)		# Include hidden files.
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 # edit command in editor
 autoload -z edit-command-line
 zle -N edit-command-line
@@ -104,9 +92,6 @@ enable-fzf-tab
 
 autoload bashcompinit
 bashcompinit
-export PATH="$PATH:$HOME/.bash-my-aws/bin"
-source ~/.bash-my-aws/aliases
-source ~/.bash-my-aws/bash_completion.sh
 
 autoload -Uz +X compinit && compinit
 
